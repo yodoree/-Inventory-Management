@@ -1,0 +1,9 @@
+extends ../layout
+
+block content 
+    form(method="POST", enctype="multipart/form-data")
+        label(for="image") 상품 사진
+        input(type='file', id="image", name='image', accept='image/*')
+        input(type="text", placeholder='상품 이름', name='title', required, value=product.title)
+        input(type="number", placeholder='수량', name='count', required, value=product.count)
+        input(type='submit', value="상품 변경")

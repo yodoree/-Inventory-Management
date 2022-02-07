@@ -1,0 +1,11 @@
+mixin product(product)
+   div
+        img(src=product.imageUrl, width=200)
+        h2
+            a(href=`/products/${product.id}`)=product.title
+        span 수량 #{product.count}개    
+        p=product.options
+        a(href=`/products/${product.id}/edit`) 상품 변경
+        br
+        a(href=`/products/${product.id}/delete`) 상품 삭제
+        hr

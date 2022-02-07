@@ -1,0 +1,13 @@
+extends ../layout
+include ../mixins/product
+
+block content 
+    form
+        input(type='text', name='term')
+        input(type='submit', value='검색')
+
+    div
+        each product in products
+            +product(product)
+        else
+            span No products found

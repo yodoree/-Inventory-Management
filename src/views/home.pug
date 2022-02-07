@@ -1,0 +1,7 @@
+extends layout.pug
+include mixins/product
+
+block content 
+    div
+        each product in products
+            +product(product)
